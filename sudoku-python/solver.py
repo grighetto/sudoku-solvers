@@ -206,7 +206,7 @@ class SudokuSolver:
 		'''
 		string = ""
 		d = self.delimiter
-		for (k,v) in solution.items():
+		for (k,v) in s.items():
 			if (k + 1) % order == 0:
 				string += "%s\n" % v.replace(d,"")
 			else:
