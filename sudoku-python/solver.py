@@ -30,13 +30,13 @@ class SudokuSolver:
 	def getBoxIds(self, i, j, order):
 		'''
 		Returns an array with the ids of all the cells
-		in the same box as vertex V(i, j), except for V itself.
+		in the same box as cell C(i, j), except for C itself.
 		'''
 		# Size of the inner boxes (usually, 3 x 3).
 		box = int(sqrt(order))
 		
 		# Determines the coordinate of the top-left cell
-		# of the inner box where this vertex is located.
+		# of the inner box where this cell is located.
 		corner_i = int(ceil(abs(i / box)) * box)
 		corner_j = int(ceil(abs(j / box)) * box)
 		
@@ -55,14 +55,14 @@ class SudokuSolver:
 	def getRowIds(self, i, j, order):
 		'''
 		Returns an array with the ids of all the cells
-		in the same row as the vertex V(i,j), except for V itself.
+		in the same row as the cell C(i,j), except for C itself.
 		'''
 		return [i*order + pos for pos in xrange(order) if pos != j]
 
 	def getColIds(self, i, j, order):
 		'''
 		Returns an array with the ids of all the cells
-		in the same column as the vertex V(i,j), except for V itself.
+		in the same column as the cell C(i,j), except for C itself.
 		'''
 		return [j + pos*order for pos in xrange(order) if pos != i]
 
