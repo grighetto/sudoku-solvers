@@ -1,0 +1,84 @@
+html, body{
+	background-color: #E7E4ED;
+	height: 95%;
+}
+
+#container {
+	margin-left: auto;	
+	margin-right: auto;
+	width: 100%;
+	height: 100%;
+}
+
+table {
+	width : 100%;
+	height: 100%;
+	border-left: 0;
+	border-bottom: 0;
+	border-top: 0;
+	border-collapse: collapse;
+	font-size: 30px;
+}
+
+th, td {
+	border: 1px solid black;
+}
+
+td {
+	text-align: center;
+}
+
+td.thick-right {
+	border-right:thick solid black;
+}
+
+td.thick-left {
+	border-left:thick solid black;
+}
+
+td.thick-bottom {
+	border-bottom:thick solid black;
+}
+
+td.thick-top {
+	border-top:thick solid black;
+}
+
+td.hint {
+	font-weight: bold; 
+	background-color: #D7D7D9;
+}
+
+td.blank {
+	background-color: white;
+}
+
+td.transparent {
+	background: rgba(255,255,255,0);
+	border: 0px;
+}
+
+td.cost {
+	background-color: #B9EBD1;
+}
+
+td.total-cost {
+	background-color: #50B380;
+	font-weight: bold;
+}
+
+td.neighbours {
+	background-color: #A4BFEB;
+}
+
+td.failed-neighbours {
+	background-color: red;
+}
+
+td.green-neighbours {
+	background-color: green;
+}
+
+#speed {
+	width: 30px;
+}
