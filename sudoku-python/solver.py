@@ -152,8 +152,8 @@ class SudokuSolver:
 		if all(len(self.parse(values[s])) == 1 for s in cells):
 			return values ## Solved!
 		## Chose the unfilled square s with the fewest possibilities
-		n,s = min((len(parse(values[s])), s) for s in cells if len(parse(values[s])) > 1)
-		return some(dfs(assign(copy(values), s, d)) for d in parse(values[s]))
+		n,s = min((len(self.parse(values[s])), s) for s in cells if len(self.parse(values[s])) > 1)
+		return self.some(self.dfs(self.assign(copy(values), s, d)) for d in self.parse(values[s]))
 
 	def assign(self, values, s, d):
 		'''
