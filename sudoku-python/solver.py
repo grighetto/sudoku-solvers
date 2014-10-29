@@ -12,7 +12,7 @@ Author: Gianluca Righetto
 '''
 from math import sqrt, ceil
 from copy import copy
-
+import argparse
 
 class SudokuSolver:
 
@@ -214,6 +214,14 @@ class SudokuSolver:
 		return string.strip()
 
 if __name__ == "__main__":
-	solver = SudokuSolver("puzzles/9x9_hard.csv")
-	solution = solver.solve()
-	print solver.toString(solution)
+	parser = argparse.ArgumentParser()
+	parser.add_argument('csv', nargs=1, metavar='INPUT', help='input CSV file')
+	parser.add_argument('-o', nargs=1, metavar='OUTPUT', help='write to output file, otherwise, print to console')
+	args = parser.parse_args()
+	solver = SudokuSolver(args.csv[0])
+	solution = solver.toString(solver.solve())
+	if args.o is None:
+		print solution
+	else:
+		with open(args.o[0], 'w') as f:
+			f.write(solution)
