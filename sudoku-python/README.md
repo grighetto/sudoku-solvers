@@ -1,6 +1,7 @@
 Usage
 ======
 
+```
 usage: solver.py [-h] [-o OUTPUT] INPUT
 
 positional arguments:
@@ -9,3 +10,4 @@ positional arguments:
 optional arguments:
   -h, --help  show this help message and exit
   -o OUTPUT   write to output file, otherwise, print to console
+```
